@@ -12,3 +12,4 @@ C:\Users\Dell\OneDrive\Desktop\C#\Basics\obj\Debug\net8.0\refint\Basics.dll
 C:\Users\Dell\OneDrive\Desktop\C#\Basics\obj\Debug\net8.0\Basics.pdb
 C:\Users\Dell\OneDrive\Desktop\C#\Basics\obj\Debug\net8.0\Basics.genruntimeconfig.cache
 C:\Users\Dell\OneDrive\Desktop\C#\Basics\obj\Debug\net8.0\ref\Basics.dll
+C:\Users\Dell\OneDrive\Desktop\C#\Basics\obj\Debug\net8.0\Basics.sourcelink.json
