@@ -6,72 +6,47 @@ namespace Basics
     {
         static void Main(string[] args)
         {
-            // int myInt = 9;
-            // int mySecondInt = 4;
+            int myInt = 5;
+            int mySecondInt = 10;
 
-            // Console.WriteLine(myInt.Equals(mySecondInt));
-            // Console.WriteLine(mySecondInt.Equals(myInt / 2));
+            if(myInt < mySecondInt)
+            {
+                myInt += 10;
+            }
 
-            // Console.WriteLine(myInt != mySecondInt);
-            // Console.WriteLine(mySecondInt == myInt / 2);
-            // Console.WriteLine(mySecondInt != myInt / 3);
+            Console.WriteLine(myInt);
 
-            // Console.WriteLine(myInt >= mySecondInt);
-            // Console.WriteLine(mySecondInt >= myInt / 2);
-            // Console.WriteLine(myInt > mySecondInt);
-            // Console.WriteLine(mySecondInt > myInt - 6);
-            // Console.WriteLine(myInt <= mySecondInt);
-            // Console.WriteLine(myInt < mySecondInt);
+            string myCow = "Cows";
+            // string myCapitalizedCow = "cow";
 
-            Console.WriteLine(5 < 10 && 5 > 10);
+            // if (myCow == myCapitalizedCow)
+            // {
+            //     Console.WriteLine("Equal");
+            // }
 
-            // Console.WriteLine(myInt);
-            
-            // myInt++;
+            // else if(myCow == myCapitalizedCow.ToLower())
+            // {
+            //     Console.WriteLine("Equal without case sensitivity");
+            // }
+            // else{
+            //     Console.WriteLine("Not Equal");
+            // }
 
-            // Console.WriteLine(myInt);
+            switch (myCow)
+            {
+                case "cow":
+                    Console.WriteLine("Lowercase");
+                    break;
+                
+                case "Cow":
+                    Console.WriteLine("Capitalized");
+                    break;
+                
+                default:
+                    Console.WriteLine("Default Case"); 
+                    break;
+            }
 
-            // myInt += 7;
-
-            // Console.WriteLine(myInt);
-
-            // myInt -= 8;
-
-            // Console.WriteLine(myInt);
-
-            // Console.WriteLine(myInt * mySecondInt);
-
-            // Console.WriteLine(myInt / mySecondInt);
-
-            // Console.WriteLine(myInt + mySecondInt);
-
-            // Console.WriteLine(myInt - mySecondInt);
-
-            // Console.WriteLine(5 + 5 * 10);
-
-            // Console.WriteLine((5 + 5) * 10);
-
-            // Console.WriteLine(Math.Pow(5,4));
-
-            // Console.WriteLine(Math.Sqrt(25));
-
-            // string myString = "test";
-
-            // Console.WriteLine(myString);
-
-            // myString += " test";
-
-            // Console.WriteLine(myString);
-
-            // myString = myString + " \"test";
-
-            // Console.WriteLine(myString);
-
-            // string[] myStringArray = myString.Split(' ');
-
-            // Console.WriteLine(myStringArray[0]);
-            // Console.WriteLine(myStringArray[1]);
-            // Console.WriteLine(myStringArray[2]);
         }
     }
 }
