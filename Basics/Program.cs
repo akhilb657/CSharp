@@ -2,134 +2,51 @@
 
 namespace Basics
 {
+    public class Computer
+    {
+        // private string _motherboard;
+        public string Motherboard {get; set;}
+        public int CPUCores {get; set;}
+        public bool HasWifi {get; set;}
+        public bool HasLTE {get; set;}
+        public DateTime ReleaseDate {get; set;}
+        public decimal Price {get; set;}
+        public string VideoCard {get; set;}
+
+        public Computer()
+        {
+            if(VideoCard == null)
+            {
+                VideoCard = "";
+            }
+
+            if(Motherboard == null)
+            {
+                Motherboard = "";
+            }
+        }
+    } 
     internal class Program
     {
-        
-        static int AccessibleInt = 7;
-
         static void Main(string[] args)
         {
-            
+            Computer myComputer = new Computer() {
+                Motherboard = "Z690",
+                HasWifi = true,
+                HasLTE = false,
+                ReleaseDate = DateTime.Now,
+                Price = 999.99m,
+                VideoCard = "RTX 2060"
+            };
 
-            int accessibleInt = 5;
+            myComputer.HasWifi = false;
 
-            Console.WriteLine(accessibleInt);
-            Console.WriteLine(AccessibleInt);
-
-            int[] intsToCompress = new int[] {1, 2, 3, 4, 5, 6, 45, 11, 22, 31};
-
-            int totalValue = 0;
-
-            foreach (int intForCompression in intsToCompress)
-            {
-                if(intForCompression > 40)
-                {
-                    totalValue += intForCompression;
-                }
-            }
-
-            Console.WriteLine(totalValue);
-
-
-            DateTime startTime = DateTime.Now;
-
-            totalValue = intsToCompress[0] + intsToCompress[1] + intsToCompress[2] + intsToCompress[3] + intsToCompress[4] + intsToCompress[5] + intsToCompress[6] + intsToCompress[7] + intsToCompress[8] + intsToCompress[9];
-
-            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
-
-            Console.WriteLine(totalValue); // 129
-
-            totalValue = 0;
-
-            startTime = DateTime.Now;
-
-            for(int i = 0; i<intsToCompress.Length; i++)
-            {
-                totalValue += intsToCompress[i];
-            }
-            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
-
-            Console.WriteLine(totalValue);
-
-           
-
-            startTime = DateTime.Now;
-
-            
-
-            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
-
-            Console.WriteLine(totalValue);
-
-            totalValue = 0;
-
-            startTime = DateTime.Now;
-
-            int index = 0;
-
-            while(index  < intsToCompress.Length)
-            {
-                totalValue += intsToCompress[index];
-                index++;
-            }
-
-            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
-
-            Console.WriteLine(totalValue);
-
-            totalValue = 0;
-
-             
-
-            index = 0;
-
-            do
-            {
-                totalValue += intsToCompress[index];
-
-                index++;
-            } 
-            while(index  < intsToCompress.Length);
-
-            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
-
-            Console.WriteLine(totalValue);
-
-            startTime = DateTime.Now;
-
-            totalValue = intsToCompress.Sum();
-
-            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
-
-            Console.WriteLine(totalValue);
-
-            startTime = DateTime.Now;
-
-            totalValue = GetSum(intsToCompress);
-
-            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
-
-            Console.WriteLine(totalValue);
-
-            int[] nums = new int[] { 10, 20, 30, 40 , 50 , 60};
-
-            totalValue = GetSum(nums);
-            Console.WriteLine(nums[0]);
-
-            Console.WriteLine(totalValue);
-
-
-        }
-
-        static private int GetSum(int[] compressableIntArray)
-        {
-            // int[] intsToCompress = new int[] {1, 2, 3, 4, 5, 6, 45, 11, 22, 31};
-            int totalValue = 0;
-            foreach (int intForCompression in compressableIntArray)
-            {  
-                totalValue += intForCompression; 
-            }
-            return totalValue;
+            Console.WriteLine(myComputer.Motherboard);
+            Console.WriteLine(myComputer.HasLTE);
+            Console.WriteLine(myComputer.HasWifi);
+            Console.WriteLine(myComputer.ReleaseDate);
+            Console.WriteLine(myComputer.VideoCard);
+            Console.WriteLine(myComputer.Price);
         }
     }
 }
