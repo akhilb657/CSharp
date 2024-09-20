@@ -4,8 +4,18 @@ namespace Basics
 {
     internal class Program
     {
+        
+        static int AccessibleInt = 7;
+
         static void Main(string[] args)
         {
+            
+
+            int accessibleInt = 5;
+
+            Console.WriteLine(accessibleInt);
+            Console.WriteLine(AccessibleInt);
+
             int[] intsToCompress = new int[] {1, 2, 3, 4, 5, 6, 45, 11, 22, 31};
 
             int totalValue = 0;
@@ -104,17 +114,18 @@ namespace Basics
             int[] nums = new int[] { 10, 20, 30, 40 , 50 , 60};
 
             totalValue = GetSum(nums);
+            Console.WriteLine(nums[0]);
 
             Console.WriteLine(totalValue);
 
 
         }
 
-        static private int GetSum(int[] intsToCompress)
+        static private int GetSum(int[] compressableIntArray)
         {
             // int[] intsToCompress = new int[] {1, 2, 3, 4, 5, 6, 45, 11, 22, 31};
             int totalValue = 0;
-            foreach (int intForCompression in intsToCompress)
+            foreach (int intForCompression in compressableIntArray)
             {  
                 totalValue += intForCompression; 
             }
