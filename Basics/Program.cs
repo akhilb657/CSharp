@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Basics.Data;
 using Basics.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
@@ -11,13 +12,11 @@ namespace Basics
         static void Main(string[] args)
         {
 
-            string connectionString = "Server=localhost;Database=DotNetCourseDatabase;TrustServerCertificate=true;Trusted_Connection=true;";
-
-            IDbConnection dbConnection = new SqlConnection(connectionString);
+            DataContextDapper dapper = new DataContextDapper();
 
             string sqlCommad = "SELECT GETDATE()";
 
-            DateTime rightNow = dbConnection.QuerySingle<DateTime>(sqlCommad);
+            DateTime rightNow = dapper.LoadDataSingle<DateTime>(sqlCommad);
 
             // Console.WriteLine(rightNow);
 
@@ -47,7 +46,7 @@ namespace Basics
 
             // Console.WriteLine(sql);
 
-            int result = dbConnection.Execute(sql);
+            bool result = dapper.ExecuteSql(sql);
 
             // Console.WriteLine(result);
 
@@ -60,7 +59,7 @@ namespace Basics
                 Computer.VideoCard
              FROM TutorialAppSchema.Computer";
 
-            IEnumerable<Computer> computers = dbConnection.Query<Computer>(sqlSelect);
+            IEnumerable<Computer> computers = dapper.LoadData<Computer>(sqlSelect);
 
             Console.WriteLine("'Motherboard', 'HasWifi', 'HasLTE', 'ReleaseDate', 'Price', 'VideoCard'");
 
