@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="microsoft.data.sqlclient" Version="5.2.2" />
+    <PackageReference Include="microsoft.entityframeworkcore" Version="8.0.8" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="8.0.8" />
+  </ItemGroup>
+
 </Project>
