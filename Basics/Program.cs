@@ -4,6 +4,8 @@ using Basics.Data;
 using Basics.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Basics
 {
@@ -12,9 +14,13 @@ namespace Basics
         static void Main(string[] args)
         {
 
-            DataContextDapper dapper = new DataContextDapper();
+            IConfiguration config = new ConfigurationBuilder()
+                .AddJsonFile("appSettings.json")
+                .Build();
 
-            DataContextEF entityFramework = new DataContextEF();
+            DataContextDapper dapper = new DataContextDapper(config);
+
+            DataContextEF entityFramework = new DataContextEF(config);
 
             string sqlCommad = "SELECT GETDATE()";
 
